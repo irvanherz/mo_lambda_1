@@ -1,0 +1,291 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Description": "An AWS Serverless Application.",
+  "Resources": {
+    "Get": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::Get",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 200,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/testget",
+              "Method": "GET"
+            }
+          }
+        }
+      }
+    },
+    "TestAPI": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::TestAPI",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/test",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceTokped": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceTokped",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/tokopedia",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceBukalapak": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceBukalapak",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/bukalapak",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceBlibli": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceBlibli",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/blibli",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceShopee": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceShopee",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/shopee",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceLazada": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceLazada",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/lazada",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePrice82Cart": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePrice82Cart",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/e2cart",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceShopify": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceShopify",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/shopify",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceJDID": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceJDID",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/jdid",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceTiktok": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePriceTiktok",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 60,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/tiktok",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    },
+    "UpdatePriceV2": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "MO_Lambda::MO_Lambda.Functions::UpdatePricePerBrg",
+        "Runtime": "dotnet6",
+        "CodeUri": "",
+        "MemorySize": 256,
+        "Timeout": 180,
+        "Role": null,
+        "Policies": [
+          "AdministratorAccess"
+        ],
+        "Events": {
+          "RootGet": {
+            "Type": "Api",
+            "Properties": {
+              "Path": "/updateprice/mp",
+              "Method": "POST"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "ApiURL": {
+      "Description": "API endpoint URL for Prod environment",
+      "Value": {
+        "Fn::Sub": "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+      }
+    }
+  }
+}
